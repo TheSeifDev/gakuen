@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Assignment - Palenight Theme</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <header>
+      <div class="subtitle">Python Course</div>
+      <h1>Assignments</h1>
+    </header>
+
+    <form id="quizForm">
+
+      <h2 class="section-title">Assignment 01: Introduction</h2>
+
+      <div class="question-block" id="q1-block">
+        <span class="question-text">Q1. Python language uses:</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> ماذا تستخدم لغة بايثون؟ (مترجم أم مفسر؟)</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> بايثون لغة مفسرة (Interpreted) تنفذ الكود
+            سطرًا بسطر.</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="q1" value="a"> a. Compiler</label>
+          <label class="option-label"><input type="radio" name="q1" value="b"> b. Commander</label>
+          <label class="option-label"><input type="radio" name="q1" value="c"> c. Interpreter</label>
+          <label class="option-label"><input type="radio" name="q1" value="d"> d. Linker</label>
+        </div>
+        <div class="answer-reveal" id="q1-ans"><strong>Correct Answer:</strong> Interpreter</div>
+      </div>
+
+      <div class="question-block" id="q2-block">
+        <span class="question-text">Q2. Application software is usually written in:</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> البرامج التطبيقية تكتب بأي لغة؟</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> تستخدم اللغات عالية المستوى (High-level).
+          </div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="q2" value="a"> a. Machine Language</label>
+          <label class="option-label"><input type="radio" name="q2" value="b"> b. High-level Language</label>
+          <label class="option-label"><input type="radio" name="q2" value="c"> c. Assembly Language</label>
+          <label class="option-label"><input type="radio" name="q2" value="d"> d. Low-level language</label>
+        </div>
+        <div class="answer-reveal" id="q2-ans"><strong>Correct Answer:</strong> High-level Language</div>
+      </div>
+
+      <div class="question-block" id="q3-block">
+        <span class="question-text">Q3. Python language can be used for:</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> مجالات استخدام بايثون؟</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="q3" value="a"> a. Desktop Applications</label>
+          <label class="option-label"><input type="radio" name="q3" value="b"> b. Web Applications</label>
+          <label class="option-label"><input type="radio" name="q3" value="c"> c. Mobile Applications</label>
+          <label class="option-label"><input type="radio" name="q3" value="d"> d. All of these</label>
+        </div>
+        <div class="answer-reveal" id="q3-ans"><strong>Correct Answer:</strong> All of these</div>
+      </div>
+
+      <div class="question-block" id="q4-block">
+        <span class="question-text">Q4. <input type="text" id="q4-input" placeholder="code here..."> is a set of rules,
+          symbols, and characters...</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> ... هي قواعد ورموز للتواصل مع الكمبيوتر.</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> تعريف لغة البرمجة (Programming Language).
+          </div>
+        </div>
+        <div class="answer-reveal" id="q4-ans"><strong>Correct Answer:</strong> Programming Language</div>
+      </div>
+
+      <div class="question-block" id="q5-block">
+        <span class="question-text">Q5. What are the major families of programming languages?</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> ما هي عائلات لغات البرمجة الرئيسية؟</div>
+        </div>
+        <div class="vscode-editor-container">
+          <div class="vscode-header">
+            <span class="tab-active">answer.txt</span>
+            <span style="margin-left:auto; opacity:0.6;">UTF-8</span>
+          </div>
+          <textarea class="vscode-input" rows="4" placeholder="1. Imperative&#10;2. Functional..."></textarea>
+        </div>
+        <div class="answer-reveal" id="q5-ans">
+          <strong>Solution:</strong>
+          The major families are: 1. Imperative, 2. Functional, 3. Logic, 4. Object-Oriented.
+        </div>
+      </div>
+
+      <div class="question-block" id="q6-block">
+        <span class="question-text">Q6. Python language is a <input type="text" id="q6-input"
+            placeholder="code here..."> level language.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> بايثون لغة ... المستوى.</div>
+        </div>
+        <div class="answer-reveal" id="q6-ans"><strong>Correct Answer:</strong> High</div>
+      </div>
+
+      <div class="question-block">
+        <span class="question-text">Q7. Write a Python program that prints “Hello World”.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> اكتب كود لطباعة "Hello World".</div>
+        </div>
+        <div class="vscode-editor-container">
+          <div class="vscode-header">
+            <span class="tab-active">main.py</span>
+            <span style="margin-left:auto; opacity:0.6;">Python</span>
+          </div>
+          <textarea class="vscode-input" rows="3" placeholder="# Type your code here&#10;print(...)"></textarea>
+        </div>
+        <div class="answer-reveal" id="q7-ans">
+          <strong>Solution:</strong>
+          <pre><code>print("Hello World")</code></pre>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <span class="question-text">Q8. Write a Python program that prints “Hello World” in two separate lines.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> اكتب كود يطبع الجملة في سطرين.</div>
+        </div>
+        <div class="vscode-editor-container">
+          <div class="vscode-header">
+            <span class="tab-active">main.py</span>
+            <span style="margin-left:auto; opacity:0.6;">Python</span>
+          </div>
+          <textarea class="vscode-input" rows="4" placeholder="print(...)&#10;print(...)"></textarea>
+        </div>
+        <div class="answer-reveal" id="q8-ans">
+          <strong>Solution:</strong>
+          <pre><code>print("Hello")
+print("World")</code></pre>
+        </div>
+      </div>
+
+      <h2 class="section-title">Assignment 02: Syntax & Variables</h2>
+
+      <div class="question-block" id="a2q1-block">
+        <span class="question-text">Q1. Identifiers can start with a letter (A-Z, a-z) or underscore (_) followed by
+          letters, digits, or underscores.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> هل يمكن للمعرفات أن تبدأ بحرف أو شرطة سفلية وتتبعها أرقام
+            وحروف؟</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> نعم، هذه قاعدة تسمية المتغيرات في بايثون. لا
+            يمكن أن تبدأ برقم.</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a2q1" value="t"> True</label>
+          <label class="option-label"><input type="radio" name="a2q1" value="f"> False</label>
+        </div>
+        <div class="answer-reveal" id="a2q1-ans"><strong>Correct Answer:</strong> True</div>
+      </div>
+
+      <div class="question-block" id="a2q2-block">
+        <span class="question-text">Q2. Python language allows punctuation characters such as @, $, and % within its
+          identifiers.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> هل تسمح بايثون بالرموز مثل @ و $ في أسماء المتغيرات؟</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> لا، الرموز الخاصة غير مسموحة في المعرفات.
+          </div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a2q2" value="t"> True</label>
+          <label class="option-label"><input type="radio" name="a2q2" value="f"> False</label>
+        </div>
+        <div class="answer-reveal" id="a2q2-ans"><strong>Correct Answer:</strong> False</div>
+      </div>
+
+      <div class="question-block" id="a2q3-block">
+        <span class="question-text">Q3. Python is not a case sensitive programming language.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> بايثون ليست حساسة لحالة الأحرف.</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> خطأ. بايثون حساسة جداً لحالة الأحرف
+            (Variable يختلف عن variable).</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a2q3" value="t"> True</label>
+          <label class="option-label"><input type="radio" name="a2q3" value="f"> False</label>
+        </div>
+        <div class="answer-reveal" id="a2q3-ans"><strong>Correct Answer:</strong> False</div>
+      </div>
+
+      <div class="question-block" id="a2q4-block">
+        <span class="question-text">Q4. Blocks of code are denoted by line indentation, which is rigidly
+          enforced.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> يتم تحديد كتل الكود عن طريق المسافات البادئة (indentation).
+          </div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> صحيح. المسافة البادئة إلزامية في بايثون
+            لتعريف الـ Blocks.</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a2q4" value="t"> True</label>
+          <label class="option-label"><input type="radio" name="a2q4" value="f"> False</label>
+        </div>
+        <div class="answer-reveal" id="a2q4-ans"><strong>Correct Answer:</strong> True</div>
+      </div>
+
+      <div class="question-block" id="a2q5-block">
+        <span class="question-text">Q5. Statements contained within [], {}, or () brackets need to use the line
+          continuation character.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> العبارات داخل الأقواس تحتاج إلى رمز متابعة السطر؟</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> خطأ. بايثون تفهم ضمنيًا أن الكود مستمر إذا
+            كان داخل أقواس مغلقة.</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a2q5" value="t"> True</label>
+          <label class="option-label"><input type="radio" name="a2q5" value="f"> False</label>
+        </div>
+        <div class="answer-reveal" id="a2q5-ans"><strong>Correct Answer:</strong> False</div>
+      </div>
+
+      <div class="question-block" id="a2q6-block">
+        <span class="question-text">Q6. Python accepts single ('), double (") and triple (''' or """) quotes to denote
+          string literals.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> تقبل بايثون علامات التنصيص المفردة والمزدوجة والثلاثية للنصوص.
+          </div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a2q6" value="t"> True</label>
+          <label class="option-label"><input type="radio" name="a2q6" value="f"> False</label>
+        </div>
+        <div class="answer-reveal" id="a2q6-ans"><strong>Correct Answer:</strong> True</div>
+      </div>
+
+      <div class="question-block" id="a2q7-block">
+        <span class="question-text">Q7. The character (//) is used in python language to comment the line of
+          code.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> الرمز // يستخدم للتعليقات في بايثون.</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> خطأ. الرمز الصحيح للتعليق هو #. الرمز //
+            يستخدم للقسمة الصحيحة.</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a2q7" value="t"> True</label>
+          <label class="option-label"><input type="radio" name="a2q7" value="f"> False</label>
+        </div>
+        <div class="answer-reveal" id="a2q7-ans"><strong>Correct Answer:</strong> False</div>
+      </div>
+
+      <div class="question-block" id="a2q8-block">
+        <span class="question-text">Q8. The character (%) is used in python language to comment multiple lines of
+          codes.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> الرمز % يستخدم للتعليقات متعددة الأسطر.</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> خطأ. التعليقات متعددة الأسطر تستخدم ''' أو
+            """.</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a2q8" value="t"> True</label>
+          <label class="option-label"><input type="radio" name="a2q8" value="f"> False</label>
+        </div>
+        <div class="answer-reveal" id="a2q8-ans"><strong>Correct Answer:</strong> False</div>
+      </div>
+
+      <div class="question-block" id="a2q9-block">
+        <span class="question-text">Q9. Python variables need explicit declaration to reserve memory space.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> متغيرات بايثون تحتاج إلى تعريف صريح لنوعها وحجز الذاكرة.</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> خطأ. بايثون لغة (Dynamically Typed)، تحجز
+            الذاكرة وتعرف النوع تلقائيًا عند إسناد قيمة.</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a2q9" value="t"> True</label>
+          <label class="option-label"><input type="radio" name="a2q9" value="f"> False</label>
+        </div>
+        <div class="answer-reveal" id="a2q9-ans"><strong>Correct Answer:</strong> False</div>
+      </div>
+
+      <div class="question-block">
+        <span class="question-text">Q10. Write a Python program that gets the sum of three variables (x=5, y=10, z=15)
+          and prints the sum in a single line.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> برنامج لجمع 3 متغيرات وطباعة المجموع في سطر واحد.</div>
+        </div>
+        <div class="vscode-editor-container">
+          <div class="vscode-header">
+            <span class="tab-active">main.py</span>
+            <span style="margin-left:auto; opacity:0.6;">Python</span>
+          </div>
+          <textarea class="vscode-input" rows="3" placeholder="x, y, z = ...&#10;print(...)"></textarea>
+        </div>
+        <div class="answer-reveal" id="a2q10-ans">
+          <strong>Solution:</strong>
+          <pre><code>x, y, z = 5, 10, 15; print(x + y + z)</code></pre>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <span class="question-text">Q11. Write a Python program that prints the first and last letter from “Hello” using
+          index numbers.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> طباعة الحرف الأول والأخير من كلمة "Hello" باستخدام الفهرس
+            (Index).</div>
+        </div>
+        <div class="vscode-editor-container">
+          <div class="vscode-header">
+            <span class="tab-active">main.py</span>
+            <span style="margin-left:auto; opacity:0.6;">Python</span>
+          </div>
+          <textarea class="vscode-input" rows="4" placeholder="word = 'Hello'&#10;print(...)"></textarea>
+        </div>
+        <div class="answer-reveal" id="a2q11-ans">
+          <strong>Solution:</strong>
+          <pre><code>word = "Hello"
+print(word[0], word[4]) 
+# Or word[-1] for last letter</code></pre>
+        </div>
+      </div>
+
+      <h2 class="section-title">Assignment 03: Conditional Statements</h2>
+      <div class="subtitle" style="margin-bottom: 20px;">Part A – True / False Questions</div>
+
+      <div class="question-block" id="a3q1-block">
+        <span class="question-text">1. Conditional statements are used to make decisions in a program.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> تستخدم الجمل الشرطية لاتخاذ القرارات في البرنامج.</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> صحيح، هي أساس المنطق والتحكم في سير
+            البرنامج.</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a3q1" value="t"> True</label>
+          <label class="option-label"><input type="radio" name="a3q1" value="f"> False</label>
+        </div>
+        <div class="answer-reveal" id="a3q1-ans"><strong>Correct Answer:</strong> True</div>
+      </div>
+
+      <div class="question-block" id="a3q2-block">
+        <span class="question-text">2. The if statement executes a block of code only when the condition is
+          false.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> تنفذ جملة if الكود فقط عندما يكون الشرط خطأ.</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> خطأ، جملة if تنفذ الكود عندما يكون الشرط
+            صحيحًا (True).</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a3q2" value="t"> True</label>
+          <label class="option-label"><input type="radio" name="a3q2" value="f"> False</label>
+        </div>
+        <div class="answer-reveal" id="a3q2-ans"><strong>Correct Answer:</strong> False</div>
+      </div>
+
+      <div class="question-block" id="a3q3-block">
+        <span class="question-text">3. The else block runs only when all previous conditions are false.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> تعمل كتلة else فقط عندما تكون جميع الشروط السابقة خاطئة.</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a3q3" value="t"> True</label>
+          <label class="option-label"><input type="radio" name="a3q3" value="f"> False</label>
+        </div>
+        <div class="answer-reveal" id="a3q3-ans"><strong>Correct Answer:</strong> True</div>
+      </div>
+
+      <div class="question-block" id="a3q4-block">
+        <span class="question-text">4. You can have multiple elif clauses in one conditional structure.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> يمكنك كتابة جمل elif متعددة في بنية شرطية واحدة.</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a3q4" value="t"> True</label>
+          <label class="option-label"><input type="radio" name="a3q4" value="f"> False</label>
+        </div>
+        <div class="answer-reveal" id="a3q4-ans"><strong>Correct Answer:</strong> True</div>
+      </div>
+
+      <div class="question-block" id="a3q5-block">
+        <span class="question-text">5. Python requires parentheses around conditions in if statements.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> تتطلب بايثون أقواسًا حول الشروط في جمل if.</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> خطأ. على عكس لغات مثل C++، بايثون لا تتطلب
+            الأقواس.</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a3q5" value="t"> True</label>
+          <label class="option-label"><input type="radio" name="a3q5" value="f"> False</label>
+        </div>
+        <div class="answer-reveal" id="a3q5-ans"><strong>Correct Answer:</strong> False</div>
+      </div>
+
+      <div class="question-block" id="a3q6-block">
+        <span class="question-text">6. Indentation is essential for defining code blocks in Python.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> المسافة البادئة ضرورية لتحديد كتل التعليمات البرمجية في
+            بايثون.</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a3q6" value="t"> True</label>
+          <label class="option-label"><input type="radio" name="a3q6" value="f"> False</label>
+        </div>
+        <div class="answer-reveal" id="a3q6-ans"><strong>Correct Answer:</strong> True</div>
+      </div>
+
+      <div class="question-block" id="a3q7-block">
+        <span class="question-text">7. An if statement can exist without an else.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> يمكن وجود جملة if بدون else.</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a3q7" value="t"> True</label>
+          <label class="option-label"><input type="radio" name="a3q7" value="f"> False</label>
+        </div>
+        <div class="answer-reveal" id="a3q7-ans"><strong>Correct Answer:</strong> True</div>
+      </div>
+
+      <div class="question-block" id="a3q8-block">
+        <span class="question-text">8. Nested if statements are allowed in Python.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> يُسمح بجمل if المتداخلة (Nested) في بايثون.</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a3q8" value="t"> True</label>
+          <label class="option-label"><input type="radio" name="a3q8" value="f"> False</label>
+        </div>
+        <div class="answer-reveal" id="a3q8-ans"><strong>Correct Answer:</strong> True</div>
+      </div>
+
+      <div class="question-block" id="a3q9-block">
+        <span class="question-text">9. The keyword elif means "otherwise if".</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> الكلمة elif تعني "وإلا إذا" (else if).</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a3q9" value="t"> True</label>
+          <label class="option-label"><input type="radio" name="a3q9" value="f"> False</label>
+        </div>
+        <div class="answer-reveal" id="a3q9-ans"><strong>Correct Answer:</strong> True</div>
+      </div>
+
+      <div class="question-block" id="a3q10-block">
+        <span class="question-text">10. Every if statement must end with an else block.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> يجب أن تنتهي كل جملة if بكتلة else.</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> خطأ. else اختيارية وليست إجبارية.</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a3q10" value="t"> True</label>
+          <label class="option-label"><input type="radio" name="a3q10" value="f"> False</label>
+        </div>
+        <div class="answer-reveal" id="a3q10-ans"><strong>Correct Answer:</strong> False</div>
+      </div>
+
+      <div class="subtitle" style="margin-bottom: 20px;">Part B – Multiple-Choice Questions</div>
+
+      <div class="question-block" id="a3q11-block">
+        <span class="question-text">1. Which of the following keywords is used for a conditional statement in
+          Python?</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> أي من الكلمات التالية تستخدم للجمل الشرطية؟</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a3q11" value="a"> a) when</label>
+          <label class="option-label"><input type="radio" name="a3q11" value="b"> b) if</label>
+          <label class="option-label"><input type="radio" name="a3q11" value="c"> c) for</label>
+          <label class="option-label"><input type="radio" name="a3q11" value="d"> d) switch</label>
+        </div>
+        <div class="answer-reveal" id="a3q11-ans"><strong>Correct Answer:</strong> b) if</div>
+      </div>
+
+      <div class="question-block" id="a3q12-block">
+        <span class="question-text">2. What is the correct syntax for an if statement?</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> ما هي الصيغة الصحيحة لجملة if؟</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> بايثون تستخدم النقطتين الرأسيتين `:` ولا
+            تتطلب `then` أو أقواس.</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a3q12" value="a"> a) if (x > 5):</label>
+          <label class="option-label"><input type="radio" name="a3q12" value="b"> b) if x > 5:</label>
+          <label class="option-label"><input type="radio" name="a3q12" value="c"> c) if x > 5 then:</label>
+          <label class="option-label"><input type="radio" name="a3q12" value="d"> d) if: x > 5</label>
+        </div>
+        <div class="answer-reveal" id="a3q12-ans"><strong>Correct Answer:</strong> b) if x > 5:</div>
+      </div>
+
+      <div class="question-block" id="a3q13-block">
+        <span class="question-text">3. The else block executes when:</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> متى يتم تنفيذ كتلة else؟</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> عندما يكون شرط if خاطئًا (False).</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a3q13" value="a"> a) The condition is true</label>
+          <label class="option-label"><input type="radio" name="a3q13" value="b"> b) The condition is false</label>
+          <label class="option-label"><input type="radio" name="a3q13" value="c"> c) The program ends</label>
+          <label class="option-label"><input type="radio" name="a3q13" value="d"> d) Always executes</label>
+        </div>
+        <div class="answer-reveal" id="a3q13-ans"><strong>Correct Answer:</strong> b) The condition is false</div>
+      </div>
+
+      <div class="question-block" id="a3q14-block">
+        <span class="question-text">4. Which keyword is used to check another condition if the first is false?</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> الكلمة المستخدمة للتحقق من شرط آخر إذا كان الأول خاطئًا؟</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a3q14" value="a"> a) elseif</label>
+          <label class="option-label"><input type="radio" name="a3q14" value="b"> b) elif</label>
+          <label class="option-label"><input type="radio" name="a3q14" value="c"> c) else if</label>
+          <label class="option-label"><input type="radio" name="a3q14" value="d"> d) check</label>
+        </div>
+        <div class="answer-reveal" id="a3q14-ans"><strong>Correct Answer:</strong> b) elif</div>
+      </div>
+
+      <div class="question-block" id="a3q15-block">
+        <span class="question-text">5. What will happen if indentation is incorrect in an if-statement block?</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> ماذا يحدث إذا كانت المسافة البادئة غير صحيحة؟</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> بايثون تعتمد على المسافات، لذا سيظهر خطأ
+            (Error).</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a3q15" value="a"> a) Code runs normally</label>
+          <label class="option-label"><input type="radio" name="a3q15" value="b"> b) Error occurs</label>
+          <label class="option-label"><input type="radio" name="a3q15" value="c"> c) Program ignores it</label>
+          <label class="option-label"><input type="radio" name="a3q15" value="d"> d) Output is 0</label>
+        </div>
+        <div class="answer-reveal" id="a3q15-ans"><strong>Correct Answer:</strong> b) Error occurs</div>
+      </div>
+
+      <div class="question-block" id="a3q16-block">
+        <span class="question-text">6. What is the output of this code?</span>
+        <pre><code>x = 10
+if x > 5:
+    print("Yes")
+else:
+    print("No")</code></pre>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> ما هو ناتج الكود؟ (هل 10 أكبر من 5؟)</div>
+        </div>
+        <div class="options-grid">
+          <label class="option-label"><input type="radio" name="a3q16" value="a"> a) Yes</label>
+          <label class="option-label"><input type="radio" name="a3q16" value="b"> b) No</label>
+          <label class="option-label"><input type="radio" name="a3q16" value="c"> c) Error</label>
+          <label class="option-label"><input type="radio" name="a3q16" value="d"> d) Nothing prints</label>
+        </div>
+        <div class="answer-reveal" id="a3q16-ans"><strong>Correct Answer:</strong> a) Yes</div>
+      </div>
+
+      <h2 class="section-title">Assignment 04: Loops (For & While)</h2>
+
+      <div class="question-block">
+        <span class="question-text">Q1. Write a Python program that prints the letters of the “University” keyword
+          except the “v” letter.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> اكتب برنامج بايثون لطباعة حروف كلمة "University" باستثناء حرف
+            "v".</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> نستخدم حلقة التكرار (for loop) مع جملة شرطية
+            (if) لاستثناء الحرف.</div>
+        </div>
+        <div class="vscode-editor-container">
+          <div class="vscode-header">
+            <span class="tab-active">main.py</span>
+            <span style="margin-left:auto; opacity:0.6;">Python</span>
+          </div>
+          <textarea class="vscode-input" rows="5"
+            placeholder="for char in 'University':&#10;    # check condition&#10;    print(char)"></textarea>
+        </div>
+        <div class="answer-reveal" id="a4q1-ans">
+          <strong>Solution:</strong>
+          <pre><code>for letter in "University":
+    if letter == "v":
+        continue
+    print(letter)</code></pre>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <span class="question-text">Q2. Write a Python program that prints numbers from 0 to 5 several times, where you
+          need to read the number of times from the user.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> برنامج لطباعة الأرقام من 0 لـ 5 عدة مرات بناءً على طلب
+            المستخدم.</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> نحتاج إلى حلقتين متداخلتين (Nested Loop)؛
+            الخارجية للتكرار والداخلية للأرقام.</div>
+        </div>
+        <div class="vscode-editor-container">
+          <div class="vscode-header">
+            <span class="tab-active">main.py</span>
+            <span style="margin-left:auto; opacity:0.6;">Python</span>
+          </div>
+          <textarea class="vscode-input" rows="6"
+            placeholder="n = int(input('Times: '))&#10;for i in range(n):&#10;    ..."></textarea>
+        </div>
+        <div class="answer-reveal" id="a4q2-ans">
+          <strong>Solution:</strong>
+          <pre><code>n = int(input("Enter times: "))
+for i in range(n):
+    for j in range(6):
+        print(j, end=" ")
+    print() # New line</code></pre>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <span class="question-text">Q3. Write a Python program that prints even numbers less than 20.</span>
+        <div class="arabic-box">
+          <div><span class="arabic-label">الترجمة:</span> اكتب برنامج لطباعة الأعداد الزوجية الأقل من 20.</div>
+          <div class="arabic-note"><span class="arabic-label">الشرح:</span> يمكن استخدام دالة range مع خطوة (step) 2، أو
+            استخدام عملية باقي القسمة %.</div>
+        </div>
+        <div class="vscode-editor-container">
+          <div class="vscode-header">
+            <span class="tab-active">main.py</span>
+            <span style="margin-left:auto; opacity:0.6;">Python</span>
+          </div>
+          <textarea class="vscode-input" rows="4" placeholder="for i in range(...):&#10;    print(i)"></textarea>
+        </div>
+        <div class="answer-reveal" id="a4q3-ans">
+          <strong>Solution:</strong>
+          <pre><code># Method 1
+for i in range(0, 20, 2):
+    print(i)
+
+# Method 2
+x = 0
+while x < 20:
+    print(x)
+    x += 2</code></pre>
+        </div>
+      </div>
+
+
+      <button type="button" class="btn-submit" onclick="checkAnswers()">Check Answers / تحقق من الإجابات</button>
+
+    </form>
+
+    <div class="footer">
+      &copy; 2025 Python &bull; Seif Ayman Ahmed
+    </div>
+  </div>
+  </div>
+  <script src="/script.js"></script>
+
+</body>
+
+</html>

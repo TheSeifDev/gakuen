@@ -1,0 +1,279 @@
+:root {
+            /* --- Material Palenight Palette --- */
+            
+            /* Backgrounds */
+            --bg-color: #292D3E;       /* Main Deep Background */
+            --card-bg: #2f334d;        /* Slightly lighter for cards */
+            --editor-bg: #292D3E;      /* Editor specific background */
+            --header-bg: #1c1e2a;      /* Darker header strip */
+            
+            /* Text Colors */
+            --text-primary: #EEFFFF;   /* Main text */
+            --text-secondary: #A6ACCD; /* Comments/Subtitles */
+            --text-muted: #676E95;     /* Placeholders */
+
+            /* Accents */
+            --accent-cyan: #89DDFF;    /* Variables/Subtitles */
+            --accent-purple: #C792EA;  /* Keywords/Headers */
+            --accent-blue: #82AAFF;    /* Buttons/Functions */
+            --accent-green: #C3E88D;   /* Strings/Success */
+            --accent-red: #F07178;     /* Errors/Deletions */
+            --accent-yellow: #FFCB6B;  /* Warnings/Classes */
+
+            /* Borders */
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 40px 20px;
+            padding: 40px;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin: 0 0 10px 0;
+            color: var(--accent-purple);
+        }
+
+        h2.section-title {
+            color: var(--accent-yellow);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* Question Blocks */
+        .question-block {
+            margin-bottom: 25px;
+            padding: 25px;
+            background: #232634;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .question-text {
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            display: block;
+        }
+
+        /* Arabic Section Styling */
+        .arabic-box {
+            margin-bottom: 20px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+            direction: rtl;
+            text-align: right;
+            font-family: 'Segoe UI', 'Tahoma', sans-serif;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .arabic-label { color: var(--accent-yellow); font-weight: bold; margin-left: 5px; }
+        .arabic-note { display: block; margin-top: 5px; font-size: 0.9rem; opacity: 0.8; }
+
+        /* VS Code Style Editor */
+        .vscode-editor-container {
+            position: relative;
+            margin-top: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+            background-color: var(--editor-bg);
+        }
+
+        .vscode-header {
+            background-color: var(--header-bg);
+            padding: 8px 15px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-family: 'Consolas', monospace;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tab-active {
+            color: var(--accent-purple);
+            border-bottom: 2px solid var(--accent-purple);
+            padding-bottom: 4px;
+        }
+
+        textarea.vscode-input {
+            width: 100%;
+            background-color: var(--editor-bg);
+            color: var(--text-primary);
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 14px;
+            border: none;
+            padding: 15px;
+            outline: none;
+            resize: vertical;
+            min-height: 100px;
+            line-height: 1.5;
+            display: block;
+        }
+        
+        textarea.vscode-input::placeholder {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        textarea.vscode-input:focus {
+            box-shadow: inset 2px 0 0 0 var(--accent-cyan); 
+        }
+
+        /* Options Grid */
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+        }
+
+        .option-label {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .option-label:hover {
+            background: rgba(137, 221, 255, 0.1);
+            border-color: var(--accent-cyan);
+            color: var(--text-primary);
+        }
+
+        input[type="radio"] { margin-right: 10px; accent-color: var(--accent-cyan); }
+
+        /* Text Input */
+        input[type="text"] {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
+            color: var(--accent-green);
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            width: 200px;
+        }
+
+        input[type="text"]:focus { 
+            outline: none; 
+            border-color: var(--accent-cyan); 
+        }
+
+        /* Hidden Answers */
+        .answer-reveal {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed var(--border-color);
+        }
+
+        .answer-reveal strong {
+            color: var(--accent-green);
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        pre {
+            background: #1c1e2a;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid var(--accent-purple);
+            overflow-x: auto;
+            margin: 0;
+        }
+
+        code { 
+            font-family: 'Consolas', 'Monaco', monospace; 
+            color: var(--accent-cyan); 
+            font-size: 0.9rem; 
+        }
+
+        /* Submit Button */
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background-color: var(--accent-blue);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: background 0.2s;
+        }
+
+        .btn-submit:hover { 
+            background-color: #93b4ff; 
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Feedback States */
+        .correct-block { border-color: var(--accent-green) !important; }
+        .incorrect-block { border-color: var(--accent-red) !important; }
+
+        @media (max-width: 768px) {
+            .container { margin: 0; border-radius: 0; border: none; }
+            .options-grid { grid-template-columns: 1fr; }
+        }
