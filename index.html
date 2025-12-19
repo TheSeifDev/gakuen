@@ -629,9 +629,33 @@ while x < 20:
     x += 2</code></pre>
         </div>
       </div>
+      <button type="button" class="btn-check" onclick="checkAnswers()">
+        Check Answers Only
+        <div style="font-size:0.75rem; text-transform:none; margin-top:5px; opacity:0.8;">Corrects MCQ & Shows
+          Solutions</div>
+      </button>
+      <div class="submission-area">
+        <div class="subtitle" style="margin-bottom: 20px;">Final Submission</div>
+
+        <div class="input-group">
+          <label>Student Name (اسم الطالب)</label>
+          <input type="text" id="studentName" placeholder="Enter your name...">
+        </div>
+
+        <div class="input-group">
+          <label>Student ID (الرقم الجامعي)</label>
+          <input type="text" id="studentID" placeholder="Enter your ID...">
+        </div>
 
 
-      <button type="button" class="btn-submit" onclick="checkAnswers()">Check Answers / تحقق من الإجابات</button>
+        <button type="button" class="btn-send" onclick="sendToTeacher()">
+          <span style="font-size:1.2rem; display:block; margin-bottom:5px;">📧</span>
+          Submit & Send to Email
+          <div style="font-size:0.75rem; text-transform:none; margin-top:5px; opacity:0.8;">Opens your email app with
+            answers</div>
+        </button>
+
+      </div>
 
     </form>
 
@@ -639,7 +663,10 @@ while x < 20:
       &copy; 2025 Python &bull; Seif Ayman Ahmed
     </div>
   </div>
-  </div>
+</div>
+
+<div id="toast">Send Successfully</div>
+
   <script src="/script.js"></script>
 
 </body>
