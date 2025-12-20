@@ -285,10 +285,15 @@
             cursor: pointer;
             font-weight: 600;
             transition: all 0.2s;
+            margin-bottom: 20px;
         }
 
         .btn-check:hover { 
             background-color: rgba(130, 170, 255, 0.1);
+        }
+
+        a{
+          color: var(--accent-green);
         }
 
         /* Button 2: Send */
