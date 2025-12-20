@@ -1,424 +1,616 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Python Assignment - Material Palenight</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Assessment - Full Course</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      /* --- Material Palenight Palette --- */
-      --bg-color: #292D3E;
-      --card-bg: #2f334d;
-      --editor-bg: #292D3E;
-      --header-bg: #1c1e2a;
+    <style>
+        :root {
+            /* --- Material Palenight Palette --- */
+            --bg-color: #292D3E;       
+            --card-bg: #2f334d;        
+            --editor-bg: #292D3E;      
+            --header-bg: #1c1e2a;      
+            
+            --text-primary: #EEFFFF;   
+            --text-secondary: #A6ACCD; 
+            --text-muted: #676E95;     
 
-      --text-primary: #EEFFFF;
-      --text-secondary: #A6ACCD;
-      --text-muted: #676E95;
+            --accent-cyan: #89DDFF;    
+            --accent-purple: #C792EA;  
+            --accent-blue: #82AAFF;    
+            --accent-green: #C3E88D;   
+            --accent-red: #F07178;     
+            --accent-yellow: #FFCB6B;  
 
-      --accent-cyan: #89DDFF;
-      --accent-purple: #C792EA;
-      --accent-blue: #82AAFF;
-      --accent-green: #C3E88D;
-      --accent-red: #F07178;
-      --accent-yellow: #FFCB6B;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
 
-      --border-color: rgba(255, 255, 255, 0.1);
-    }
+        * { box-sizing: border-box; }
 
-    * {
-      box-sizing: border-box;
-    }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
 
-    body {
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-primary);
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-    }
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 40px 20px;
+            padding: 40px;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+        }
 
-    .container {
-      width: 100%;
-      max-width: 900px;
-      margin: 40px 20px;
-      padding: 40px;
-      background: var(--bg-color);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-    }
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
 
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 20px;
-      margin-bottom: 30px;
-      text-align: center;
-    }
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin: 0 0 10px 0;
+            color: var(--accent-purple);
+        }
 
-    h1 {
-      font-size: 1.8rem;
-      font-weight: 500;
-      margin: 0 0 10px 0;
-      color: var(--accent-purple);
-    }
+        .subtitle {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
 
-    .subtitle {
-      color: var(--accent-cyan);
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 600;
-    }
+        /* Section Dividers */
+        .section-title {
+            color: var(--accent-yellow);
+            border-bottom: 2px solid var(--accent-purple);
+            padding-bottom: 10px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
 
-    /* Question Blocks */
-    .question-block {
-      margin-bottom: 30px;
-      padding: 30px;
-      background: #232634;
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      border-left: 4px solid var(--accent-blue);
-      transition: transform 0.2s ease;
-    }
+        /* Question Blocks */
+        .question-block {
+            margin-bottom: 30px;
+            padding: 30px;
+            background: #232634;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-blue);
+            transition: transform 0.2s ease;
+        }
 
-    .question-text {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 15px;
-      color: var(--text-primary);
-      display: block;
-    }
+        .question-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+            display: block;
+        }
 
-    /* --- BEAUTIFUL ARABIC STYLING --- */
-    .arabic-text {
-      font-family: 'Cairo', sans-serif;
-      /* Modern Arabic Font */
-      direction: rtl;
-      text-align: right;
-      background: linear-gradient(90deg, rgba(41, 45, 62, 0.5) 0%, rgba(137, 221, 255, 0.05) 100%);
-      padding: 15px 20px;
-      border-right: 3px solid var(--accent-yellow);
-      border-radius: 8px;
-      margin-bottom: 20px;
-      font-size: 1rem;
-      line-height: 1.8;
-      /* Better spacing for Arabic script */
-      color: #d0d6f9;
-    }
+        /* --- BEAUTIFUL ARABIC STYLING --- */
+        .arabic-text {
+            font-family: 'Cairo', sans-serif; /* Modern Arabic Font */
+            direction: rtl;
+            text-align: right;
+            background: linear-gradient(90deg, rgba(41, 45, 62, 0.5) 0%, rgba(137, 221, 255, 0.05) 100%);
+            padding: 15px 20px;
+            border-right: 3px solid var(--accent-yellow);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #d0d6f9;
+        }
 
-    .arabic-text strong {
-      color: var(--accent-yellow);
-      font-weight: 700;
-    }
+        .arabic-text strong {
+            color: var(--accent-yellow);
+            font-weight: 700;
+        }
 
-    .requirements {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      margin-bottom: 20px;
-      list-style-type: disc;
-      padding-left: 20px;
-    }
+        .requirements {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        
+        .requirements li { margin-bottom: 8px; }
 
-    .requirements li {
-      margin-bottom: 8px;
-    }
+        /* VS Code Style Editor */
+        .vscode-editor-container {
+            position: relative;
+            margin-top: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: var(--editor-bg);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
 
-    /* VS Code Style Editor */
-    .vscode-editor-container {
-      position: relative;
-      margin-top: 15px;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      overflow: hidden;
-      background-color: var(--editor-bg);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    }
+        .vscode-header {
+            background-color: var(--header-bg);
+            padding: 8px 15px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-family: 'Consolas', monospace;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-    .vscode-header {
-      background-color: var(--header-bg);
-      padding: 8px 15px;
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      font-family: 'Consolas', monospace;
-      border-bottom: 1px solid var(--border-color);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+        .tab-active {
+            color: var(--accent-purple);
+            border-bottom: 2px solid var(--accent-purple);
+            padding-bottom: 4px;
+        }
 
-    .tab-active {
-      color: var(--accent-purple);
-      border-bottom: 2px solid var(--accent-purple);
-      padding-bottom: 4px;
-    }
+        textarea.vscode-input {
+            width: 100%;
+            background-color: var(--editor-bg);
+            color: var(--text-primary);
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 15px;
+            border: none;
+            padding: 20px;
+            outline: none;
+            resize: vertical;
+            min-height: 120px;
+            line-height: 1.5;
+            display: block;
+        }
+        
+        textarea.vscode-input::placeholder {
+            color: var(--text-muted);
+            font-style: italic;
+        }
 
-    textarea.vscode-input {
-      width: 100%;
-      background-color: var(--editor-bg);
-      color: var(--text-primary);
-      font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-      font-size: 15px;
-      border: none;
-      padding: 20px;
-      outline: none;
-      resize: vertical;
-      min-height: 160px;
-      line-height: 1.5;
-      display: block;
-    }
+        textarea.vscode-input:focus {
+            box-shadow: inset 2px 0 0 0 var(--accent-cyan); 
+        }
 
-    textarea.vscode-input::placeholder {
-      color: var(--text-muted);
-      font-style: italic;
-    }
+        /* Hidden Answers */
+        .answer-reveal {
+            display: none;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px dashed var(--border-color);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-    textarea.vscode-input:focus {
-      box-shadow: inset 2px 0 0 0 var(--accent-cyan);
-    }
+        .answer-reveal strong {
+            color: var(--accent-green);
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
 
-    /* Hidden Answers */
-    .answer-reveal {
-      display: none;
-      margin-top: 20px;
-      padding-top: 20px;
-      border-top: 1px dashed var(--border-color);
-      animation: fadeIn 0.5s ease-in-out;
-    }
+        /* Explanation Box */
+        .explanation {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(199, 146, 234, 0.05);
+            border: 1px solid rgba(199, 146, 234, 0.1);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+        
+        .explanation h4 {
+            color: var(--accent-cyan);
+            margin: 0 0 8px 0;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .arabic-explain {
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
+        pre {
+            background: #1c1e2a;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 3px solid var(--accent-purple);
+            overflow-x: auto;
+            margin: 0;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+        }
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+        code { 
+            font-family: 'Consolas', 'Monaco', monospace; 
+            color: var(--accent-cyan); 
+            font-size: 0.95rem; 
+        }
 
-    .answer-reveal strong {
-      color: var(--accent-green);
-      display: block;
-      margin-bottom: 10px;
-      font-size: 1rem;
-    }
+        /* Syntax Highlighting */
+        .kwd { color: var(--accent-purple); font-weight: bold; } 
+        .func { color: var(--accent-blue); } 
+        .str { color: var(--accent-green); } 
+        .num { color: #F78C6C; } 
+        .cls { color: var(--accent-yellow); } 
+        .com { color: var(--text-muted); font-style: italic; }
 
-    /* Explanation Box */
-    .explanation {
-      margin-top: 15px;
-      padding: 15px;
-      background: rgba(199, 146, 234, 0.05);
-      /* Very light purple tint */
-      border: 1px solid rgba(199, 146, 234, 0.1);
-      border-radius: 6px;
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-    }
+        /* --- Buttons --- */
+        .submission-area {
+            margin-top: 50px;
+            padding: 30px;
+            background: #232634;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
 
-    .explanation h4 {
-      color: var(--accent-cyan);
-      margin: 0 0 8px 0;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
+        .btn-check {
+            width: 100%;
+            max-width: 400px;
+            padding: 18px;
+            background: linear-gradient(45deg, rgba(130, 170, 255, 0.1), transparent);
+            color: var(--accent-blue);
+            border: 2px solid var(--accent-blue);
+            border-radius: 50px; /* Modern pill shape */
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.3s;
+            font-family: 'Cairo', sans-serif;
+        }
 
-    .arabic-explain {
-      font-family: 'Cairo', sans-serif;
-      direction: rtl;
-      text-align: right;
-      margin-top: 10px;
-      padding-top: 10px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      color: var(--text-primary);
-      line-height: 1.7;
-    }
+        .btn-check:hover { 
+            background-color: var(--accent-blue);
+            color: #1c1e2a;
+            box-shadow: 0 0 15px rgba(130, 170, 255, 0.5);
+        }
 
-    pre {
-      background: #1c1e2a;
-      padding: 20px;
-      border-radius: 6px;
-      border-left: 3px solid var(--accent-purple);
-      overflow-x: auto;
-      margin: 0;
-      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
-    }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
 
-    code {
-      font-family: 'Consolas', 'Monaco', monospace;
-      color: var(--accent-cyan);
-      font-size: 0.95rem;
-    }
-
-    /* Syntax Highlighting */
-    .kwd {
-      color: var(--accent-purple);
-      font-weight: bold;
-    }
-
-    .func {
-      color: var(--accent-blue);
-    }
-
-    .str {
-      color: var(--accent-green);
-    }
-
-    .num {
-      color: #F78C6C;
-    }
-
-    .cls {
-      color: var(--accent-yellow);
-    }
-
-    .com {
-      color: var(--text-muted);
-      font-style: italic;
-    }
-
-    /* --- Buttons --- */
-    .submission-area {
-      margin-top: 50px;
-      padding: 30px;
-      background: #232634;
-      border-radius: 12px;
-      border: 1px solid var(--border-color);
-      text-align: center;
-    }
-
-    .btn-check {
-      width: 100%;
-      max-width: 400px;
-      padding: 18px;
-      background: linear-gradient(45deg, rgba(130, 170, 255, 0.1), transparent);
-      color: var(--accent-blue);
-      border: 2px solid var(--accent-blue);
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      cursor: pointer;
-      font-weight: 700;
-      transition: all 0.3s;
-      font-family: 'Cairo', sans-serif;
-    }
-
-    .btn-check:hover {
-      background-color: var(--accent-blue);
-      color: #1c1e2a;
-      box-shadow: 0 0 15px rgba(130, 170, 255, 0.5);
-    }
-
-    .footer {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border-color);
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        margin: 0;
-        border-radius: 0;
-        border: none;
-        padding: 20px;
-      }
-    }
-  </style>
+        @media (max-width: 768px) {
+            .container { margin: 0; border-radius: 0; border: none; padding: 20px; }
+        }
+    </style>
 </head>
-
 <body>
 
-  <div class="container">
+<div class="container">
     <header>
-      <h1>Python Programming</h1>
-      <div class="subtitle">Functions, Modules, and Data Structures</div>
+        <h1>Python Programming</h1>
+        <div class="subtitle">Comprehensive Assessment</div>
     </header>
 
+    <h2 class="section-title">Section 1: Lists</h2>
+
     <div class="question-block" id="q1-block">
-      <span class="question-text">Q1: Functions with Loops</span>
-
-      <div class="arabic-text">
-        <strong>المطلوب:</strong> اكتب دالة برمجية باسم <code>count_even_numbers(numbers)</code>.<br>
-        يجب أن تستقبل هذه الدالة "قائمة من الأرقام"، وتقوم بإرجاع <strong>عدد الأرقام الزوجية</strong> الموجودة داخل
-        القائمة.
-      </div>
-
-      <ul class="requirements">
-        <li>Write a function <code>count_even_numbers(numbers)</code>.</li>
-        <li>Input: List of integers.</li>
-        <li>Returns: Count of even numbers.</li>
-        <li>Example: <code>[1, 2, 3, 4, 6]</code> -> Returns <code>3</code></li>
-      </ul>
-
-      <div class="vscode-editor-container">
-        <div class="vscode-header">
-          <span class="tab-active">solution.py</span>
+        <span class="question-text">Q1: Basic List Operations</span>
+        <div class="arabic-text">
+            <strong>المطلوب:</strong><br>
+            1. أنشئ قائمة باسم <code>numbers</code> تحتوي على القيم: 1, 3, 5, 7, 9.<br>
+            2. أضف الرقم 11 إلى نهاية القائمة.<br>
+            3. احذف الرقم 3 من القائمة.<br>
+            4. اطبع طول القائمة.<br>
+            5. احسب واطبع عدد الأرقام الفردية في القائمة.
         </div>
-        <textarea class="vscode-input" id="q1-code" placeholder="def count_even_numbers(numbers):
-    # Write your code here..."></textarea>
-      </div>
+        <ul class="requirements">
+            <li>Create <code>numbers</code> list: [1, 3, 5, 7, 9].</li>
+            <li>Append 11. Remove 3. Print Length.</li>
+            <li>Count odd numbers.</li>
+        </ul>
+        <div class="vscode-editor-container">
+            <div class="vscode-header"><span class="tab-active">lists.py</span></div>
+            <textarea class="vscode-input" id="q1-code" placeholder="# Write your code here..."></textarea>
+        </div>
+        <div class="answer-reveal" id="q1-ans">
+            <strong>Model Answer:</strong>
+<pre><code>numbers = [<span class="num">1</span>, <span class="num">3</span>, <span class="num">5</span>, <span class="num">7</span>, <span class="num">9</span>]
+numbers.append(<span class="num">11</span>)
+numbers.remove(<span class="num">3</span>)
+<span class="func">print</span>(<span class="func">len</span>(numbers))
 
-      <div class="answer-reveal" id="q1-ans">
-        <strong>Model Answer:</strong>
-        <pre><code><span class="kwd">def</span> <span class="func">count_even_numbers</span>(numbers):
+<span class="com"># All remaining numbers are odd, or use loop:</span>
+count = <span class="num">0</span>
+<span class="kwd">for</span> n <span class="kwd">in</span> numbers:
+    <span class="kwd">if</span> n % <span class="num">2</span> != <span class="num">0</span>:
+        count += <span class="num">1</span>
+<span class="func">print</span>(count)</code></pre>
+        </div>
+    </div>
+
+    <div class="question-block" id="q2-block">
+        <span class="question-text">Q2: List Output Prediction</span>
+        <div class="arabic-text">
+            <strong>سؤال:</strong> ما هو ناتج الكود التالي؟
+        </div>
+        <div style="background: #1c1e2a; padding: 10px; border-radius: 4px; margin-bottom: 10px;">
+            <code style="color: var(--accent-cyan);">fruits = ["apple", "banana", "cherry"]<br>
+            fruits[1] = "orange"<br>
+            fruits.append("mango")<br>
+            print(fruits)</code>
+        </div>
+        <div class="answer-reveal" id="q2-ans">
+            <strong>Answer:</strong>
+            <pre><code>[<span class="str">'apple'</span>, <span class="str">'orange'</span>, <span class="str">'cherry'</span>, <span class="str">'mango'</span>]</code></pre>
+            <div class="explanation arabic-explain">
+                تم تغيير العنصر ذو المؤشر 1 ("banana") إلى "orange"، ثم إضافة "mango" إلى النهاية.
+            </div>
+        </div>
+    </div>
+
+    <div class="question-block" id="q3-block">
+        <span class="question-text">Q3: Student Names List</span>
+        <div class="arabic-text">
+            <strong>المطلوب:</strong> اكتب برنامجاً ينشئ قائمة بـ 5 أسماء طلاب.<br>
+            - اطبع الاسم الأول والاسم الأخير في القائمة.<br>
+            - اطبع القائمة كاملة بترتيب معكوس (Reverse).
+        </div>
+        <div class="vscode-editor-container">
+            <div class="vscode-header"><span class="tab-active">students.py</span></div>
+            <textarea class="vscode-input" id="q3-code"></textarea>
+        </div>
+        <div class="answer-reveal" id="q3-ans">
+            <strong>Model Answer:</strong>
+<pre><code>students = [<span class="str">"Ahmed"</span>, <span class="str">"Sara"</span>, <span class="str">"Ali"</span>, <span class="str">"Mona"</span>, <span class="str">"Omar"</span>]
+<span class="func">print</span>(students[<span class="num">0</span>])  <span class="com"># First</span>
+<span class="func">print</span>(students[-<span class="num">1</span>]) <span class="com"># Last</span>
+
+students.reverse()
+<span class="func">print</span>(students)
+<span class="com"># Or: print(students[::-1])</span></code></pre>
+        </div>
+    </div>
+
+    <div class="question-block" id="q4-block">
+        <span class="question-text">Q4: Debugging Lists</span>
+        <div class="arabic-text">
+            <strong>المطلوب:</strong> صحح الأخطاء في الكود التالي (تذكر أن المؤشرات تبدأ من 0).
+        </div>
+        <div style="background: #1c1e2a; padding: 10px; border-radius: 4px; margin-bottom: 10px;">
+            <code style="color: #F07178;">colors = ["red", "green", "blue"]<br>
+            colors.add("yellow")  # Error 1<br>
+            print(colors[3])      # Error 2 (before adding)</code>
+        </div>
+        <div class="answer-reveal" id="q4-ans">
+            <strong>Correction:</strong>
+<pre><code>colors = [<span class="str">"red"</span>, <span class="str">"green"</span>, <span class="str">"blue"</span>]
+colors.append(<span class="str">"yellow"</span>)  <span class="com"># Use append(), not add()</span>
+<span class="func">print</span>(colors[<span class="num">3</span>])         <span class="com"># Now index 3 exists ("yellow")</span></code></pre>
+        </div>
+    </div>
+
+    <h2 class="section-title">Section 2: Tuples</h2>
+
+    <div class="question-block" id="q5-block">
+        <span class="question-text">Q5: Tuple Immutability</span>
+        <div class="arabic-text">
+            <strong>المطلوب:</strong><br>
+            1. أنشئ Tuple باسم <code>days</code> تحتوي على أيام الأسبوع.<br>
+            2. اطبع اليوم الثالث.<br>
+            3. حاول تغيير اليوم الأول إلى "Funday". ماذا يحدث؟
+        </div>
+        <div class="vscode-editor-container">
+            <div class="vscode-header"><span class="tab-active">days.py</span></div>
+            <textarea class="vscode-input" id="q5-code"></textarea>
+        </div>
+        <div class="answer-reveal" id="q5-ans">
+            <strong>Model Answer:</strong>
+<pre><code>days = (<span class="str">"Sun"</span>, <span class="str">"Mon"</span>, <span class="str">"Tue"</span>, <span class="str">"Wed"</span>, <span class="str">"Thu"</span>, <span class="str">"Fri"</span>, <span class="str">"Sat"</span>)
+<span class="func">print</span>(days[<span class="num">2</span>])
+
+<span class="com"># days[0] = "Funday"  <-- This causes TypeError because Tuples are immutable.</span></code></pre>
+        </div>
+    </div>
+
+    <div class="question-block" id="q6-block">
+        <span class="question-text">Q6: Tuple Unpacking Output</span>
+        <div class="arabic-text">
+            <strong>سؤال:</strong> ما هو ناتج الكود التالي؟
+        </div>
+        <div style="background: #1c1e2a; padding: 10px; border-radius: 4px; margin-bottom: 10px;">
+            <code style="color: var(--accent-cyan);">data = (10, 20, 30)<br>
+            x, y, z = data<br>
+            print(y + z)</code>
+        </div>
+        <div class="answer-reveal" id="q6-ans">
+            <strong>Answer:</strong>
+            <pre><code><span class="num">50</span></code></pre>
+            <div class="explanation arabic-explain">
+                تم توزيع القيم: x=10, y=20, z=30. وبالتالي 20 + 30 = 50.
+            </div>
+        </div>
+    </div>
+
+    <div class="question-block" id="q7-block">
+        <span class="question-text">Q7: Personal Info Tuple</span>
+        <div class="arabic-text">
+            <strong>المطلوب:</strong> أنشئ Tuple باسم <code>info</code> تخزن فيها: اسمك، عمرك، ومدينتك.<br>
+            استخدم الفهرسة (Indexing) لطباعة <strong>عمرك فقط</strong>.
+        </div>
+        <div class="vscode-editor-container">
+            <div class="vscode-header"><span class="tab-active">info.py</span></div>
+            <textarea class="vscode-input" id="q7-code"></textarea>
+        </div>
+        <div class="answer-reveal" id="q7-ans">
+            <strong>Model Answer:</strong>
+<pre><code>info = (<span class="str">"Ali"</span>, <span class="num">21</span>, <span class="str">"Alexandria"</span>)
+<span class="func">print</span>(info[<span class="num">1</span>])</code></pre>
+        </div>
+    </div>
+
+    <div class="question-block" id="q8-block">
+        <span class="question-text">Q8: Converting Tuple to List</span>
+        <div class="arabic-text">
+            <strong>المطلوب:</strong> حول الـ Tuple التالي إلى قائمة (List) باستخدام الدالة الجاهزة <code>list()</code>.
+        </div>
+        <div style="margin-bottom: 10px;"><code>t = (4, 5, 6)</code></div>
+        <div class="vscode-editor-container">
+            <div class="vscode-header"><span class="tab-active">convert.py</span></div>
+            <textarea class="vscode-input" id="q8-code"></textarea>
+        </div>
+        <div class="answer-reveal" id="q8-ans">
+            <strong>Model Answer:</strong>
+<pre><code>t = (<span class="num">4</span>, <span class="num">5</span>, <span class="num">6</span>)
+my_list = <span class="func">list</span>(t)
+<span class="func">print</span>(my_list)</code></pre>
+        </div>
+    </div>
+
+    <h2 class="section-title">Section 3: Sets</h2>
+
+    <div class="question-block" id="q9-block">
+        <span class="question-text">Q9: Set Operations</span>
+        <div class="arabic-text">
+            <strong>المطلوب:</strong><br>
+            أنشئ المجموعة A = {1, 2, 3, 4} والمجموعة B = {3, 4, 5, 6}.<br>
+            اطبع: 1. الاتحاد (Union) | 2. التقاطع (Intersection) | 3. الفرق (Difference).
+        </div>
+        <div class="vscode-editor-container">
+            <div class="vscode-header"><span class="tab-active">sets_op.py</span></div>
+            <textarea class="vscode-input" id="q9-code"></textarea>
+        </div>
+        <div class="answer-reveal" id="q9-ans">
+            <strong>Model Answer:</strong>
+<pre><code>A = {<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>}
+B = {<span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>, <span class="num">6</span>}
+
+<span class="func">print</span>(A | B) <span class="com"># Union</span>
+<span class="func">print</span>(A & B) <span class="com"># Intersection</span>
+<span class="func">print</span>(A - B) <span class="com"># Difference (Items in A not in B)</span></code></pre>
+        </div>
+    </div>
+
+    <div class="question-block" id="q10-block">
+        <span class="question-text">Q10: Set Output Prediction</span>
+        <div class="arabic-text">
+            <strong>سؤال:</strong> ما هو ناتج الكود التالي؟ (تذكر: المجموعات لا تسمح بالتكرار).
+        </div>
+        <div style="background: #1c1e2a; padding: 10px; border-radius: 4px; margin-bottom: 10px;">
+            <code style="color: var(--accent-cyan);">s = {2, 4, 6}<br>
+            s.add(8)<br>
+            s.remove(4)<br>
+            s.add(2)<br>
+            print(s)</code>
+        </div>
+        <div class="answer-reveal" id="q10-ans">
+            <strong>Answer:</strong>
+            <pre><code>{<span class="num">2</span>, <span class="num">6</span>, <span class="num">8</span>}</code></pre>
+            <div class="explanation arabic-explain">
+                تمت إضافة 8، وحذف 4. محاولة إضافة 2 مرة أخرى تم تجاهلها لأن 2 موجودة بالفعل. (الترتيب قد يختلف عند الطباعة).
+            </div>
+        </div>
+    </div>
+
+    <div class="question-block" id="q11-block">
+        <span class="question-text">Q11: Remove Duplicates</span>
+        <div class="arabic-text">
+            <strong>المطلوب:</strong> اكتب كوداً لإزالة التكرار من القائمة التالية عن طريق تحويلها إلى Set.
+        </div>
+        <div style="margin-bottom: 10px;"><code>names = ["Ali", "Omar", "Ali", "Hoda", "Omar"]</code></div>
+        <div class="vscode-editor-container">
+            <div class="vscode-header"><span class="tab-active">clean.py</span></div>
+            <textarea class="vscode-input" id="q11-code"></textarea>
+        </div>
+        <div class="answer-reveal" id="q11-ans">
+            <strong>Model Answer:</strong>
+<pre><code>names = [<span class="str">"Ali"</span>, <span class="str">"Omar"</span>, <span class="str">"Ali"</span>, <span class="str">"Hoda"</span>, <span class="str">"Omar"</span>]
+unique_names = <span class="func">list</span>(<span class="cls">set</span>(names))
+<span class="func">print</span>(unique_names)</code></pre>
+        </div>
+    </div>
+
+    <h2 class="section-title">Section 4: Functions & Modules</h2>
+
+    <div class="question-block" id="q12-block">
+        <span class="question-text">Q12: Functions with Loops</span>
+        
+        <div class="arabic-text">
+            <strong>المطلوب:</strong> اكتب دالة برمجية باسم <code>count_even_numbers(numbers)</code>.<br>
+            يجب أن تستقبل هذه الدالة "قائمة من الأرقام"، وتقوم بإرجاع <strong>عدد الأرقام الزوجية</strong>.
+        </div>
+
+        <ul class="requirements">
+            <li>Write a function <code>count_even_numbers(numbers)</code>.</li>
+            <li>Input: List of integers.</li>
+            <li>Returns: Count of even numbers.</li>
+        </ul>
+        
+        <div class="vscode-editor-container">
+            <div class="vscode-header">
+                <span class="tab-active">solution.py</span>
+            </div>
+            <textarea class="vscode-input" id="q12-code" placeholder="def count_even_numbers(numbers):"></textarea>
+        </div>
+
+        <div class="answer-reveal" id="q12-ans">
+            <strong>Model Answer:</strong>
+<pre><code><span class="kwd">def</span> <span class="func">count_even_numbers</span>(numbers):
     count = <span class="num">0</span>
     <span class="kwd">for</span> num <span class="kwd">in</span> numbers:
         <span class="kwd">if</span> num % <span class="num">2</span> == <span class="num">0</span>:
             count += <span class="num">1</span>
     <span class="kwd">return</span> count</code></pre>
-
-        <div class="explanation">
-          <h4>Logic & Explanation:</h4>
-          We initialize a <code>count</code> variable to 0. We iterate through every number in the list. The modulo
-          operator <code>% 2 == 0</code> checks if a number is even.
-          <div class="arabic-explain">
-            <strong>الشرح:</strong> نبدأ بتعريف متغير <code>count</code> بقيمة صفر. نستخدم حلقة تكرار للمرور على كل عنصر
-            في القائمة. المعادلة <code>% 2 == 0</code> هي الطريقة البرمجية للتحقق من أن الرقم زوجي.
-          </div>
         </div>
-      </div>
     </div>
 
-    <div class="question-block" id="q2-block">
-      <span class="question-text">Q2: Functions with Conditions</span>
+    <div class="question-block" id="q13-block">
+        <span class="question-text">Q13: Functions with Conditions</span>
 
-      <div class="arabic-text">
-        <strong>المطلوب:</strong> اكتب دالة <code>check_grade(score)</code> للتحقق من الدرجات (0-100).<br>
-        يجب أن تُرجع التقدير نصياً: "Excellent" (للدرجة 85 فأكثر)، "Very Good" (75)، "Good" (65)، "Pass" (50)، وفي غير
-        ذلك تُرجع "Fail".
-      </div>
-
-      <ul class="requirements">
-        <li>Write a function <code>check_grade(score)</code> (0-100).</li>
-        <li>Returns "Excellent" (≥85), "Very Good" (≥75), "Good" (≥65), "Pass" (≥50), else "Fail".</li>
-      </ul>
-
-      <div class="vscode-editor-container">
-        <div class="vscode-header">
-          <span class="tab-active">grades.py</span>
+        <div class="arabic-text">
+            <strong>المطلوب:</strong> اكتب دالة <code>check_grade(score)</code> للتحقق من الدرجات (0-100).<br>
+            يجب أن تُرجع التقدير نصياً: "Excellent" (≥85), "Very Good" (≥75), "Good" (≥65), "Pass" (≥50), else "Fail".
         </div>
-        <textarea class="vscode-input" id="q2-code" placeholder="def check_grade(score):
-    # Write your logic here..."></textarea>
-      </div>
+        
+        <div class="vscode-editor-container">
+            <div class="vscode-header">
+                <span class="tab-active">grades.py</span>
+            </div>
+            <textarea class="vscode-input" id="q13-code"></textarea>
+        </div>
 
-      <div class="answer-reveal" id="q2-ans">
-        <strong>Model Answer:</strong>
-        <pre><code><span class="kwd">def</span> <span class="func">check_grade</span>(score):
+        <div class="answer-reveal" id="q13-ans">
+            <strong>Model Answer:</strong>
+<pre><code><span class="kwd">def</span> <span class="func">check_grade</span>(score):
     <span class="kwd">if</span> score >= <span class="num">85</span>:
         <span class="kwd">return</span> <span class="str">"Excellent"</span>
     <span class="kwd">elif</span> score >= <span class="num">75</span>:
@@ -429,44 +621,27 @@
         <span class="kwd">return</span> <span class="str">"Pass"</span>
     <span class="kwd">else</span>:
         <span class="kwd">return</span> <span class="str">"Fail"</span></code></pre>
-        <div class="explanation">
-          <h4>Logic & Explanation:</h4>
-          We use an <code>if-elif-else</code> chain. It checks conditions from highest to lowest. As soon as one
-          condition is true, Python executes it and ignores the rest.
-          <div class="arabic-explain">
-            <strong>الشرح:</strong> نستخدم سلسلة الشروط <code>if-elif-else</code>. يتم فحص الشروط بالترتيب من الأعلى
-            للأسفل. بمجرد أن يتحقق شرط واحد (مثلاً الدرجة أكبر من 85)، تتوقف الدالة وتعطي النتيجة فوراً.
-          </div>
         </div>
-      </div>
     </div>
 
-    <div class="question-block" id="q3-block">
-      <span class="question-text">Q3: Functions with Lists and Tuples</span>
+    <div class="question-block" id="q14-block">
+        <span class="question-text">Q14: Functions with Lists and Tuples</span>
 
-      <div class="arabic-text">
-        <strong>المطلوب:</strong> اكتب دالة <code>min_max_tuple(numbers)</code>.<br>
-        المهمة هي إيجاد أصغر وأكبر رقم في القائمة، وإرجاع الناتج داخل <strong>Tuple</strong> بالشكل التالي:
-        <code>(أصغر رقم، أكبر رقم)</code>.
-      </div>
-
-      <ul class="requirements">
-        <li>Write <code>min_max_tuple(numbers)</code>.</li>
-        <li>Return a tuple: <code>(min_value, max_value)</code>.</li>
-        <li>Example: <code>[4, 9, 1, 7]</code> -> <code>(1, 9)</code></li>
-      </ul>
-
-      <div class="vscode-editor-container">
-        <div class="vscode-header">
-          <span class="tab-active">tuples.py</span>
+        <div class="arabic-text">
+            <strong>المطلوب:</strong> اكتب دالة <code>min_max_tuple(numbers)</code> لإيجاد أصغر وأكبر رقم.<br>
+            يجب إرجاع الناتج داخل <strong>Tuple</strong>: <code>(أصغر رقم، أكبر رقم)</code>.
         </div>
-        <textarea class="vscode-input" id="q3-code" placeholder="def min_max_tuple(numbers):
-    # Find min and max..."></textarea>
-      </div>
+        
+        <div class="vscode-editor-container">
+            <div class="vscode-header">
+                <span class="tab-active">tuples.py</span>
+            </div>
+            <textarea class="vscode-input" id="q14-code"></textarea>
+        </div>
 
-      <div class="answer-reveal" id="q3-ans">
-        <strong>Model Answer:</strong>
-        <pre><code><span class="kwd">def</span> <span class="func">min_max_tuple</span>(numbers):
+        <div class="answer-reveal" id="q14-ans">
+            <strong>Model Answer:</strong>
+<pre><code><span class="kwd">def</span> <span class="func">min_max_tuple</span>(numbers):
     minimum = numbers[<span class="num">0</span>]
     maximum = numbers[<span class="num">0</span>]
     <span class="kwd">for</span> num <span class="kwd">in</span> numbers:
@@ -475,132 +650,97 @@
         <span class="kwd">if</span> num > maximum:
             maximum = num
     <span class="kwd">return</span> (minimum, maximum)</code></pre>
-        <div class="explanation">
-          <h4>Logic & Explanation:</h4>
-          We assume the first number is both the min and max. Then we loop through the rest. If we find a smaller
-          number, we update min. If we find a larger one, we update max.
-          <div class="arabic-explain">
-            <strong>الشرح:</strong> نفترض مبدئياً أن أول رقم هو الأصغر والأكبر. ثم نقارنه بباقي الأرقام؛ إذا وجدنا رقماً
-            أصغر نُحدث قيمة الـ min، وإذا وجدنا أكبر نُحدث الـ max. في النهاية نُرجع النتيجة بين أقواس <code>()</code>
-            لإنشاء Tuple.
-          </div>
         </div>
-      </div>
     </div>
 
-    <div class="question-block" id="q4-block">
-      <span class="question-text">Q4: Functions with Sets</span>
+    <div class="question-block" id="q15-block">
+        <span class="question-text">Q15: Functions with Sets</span>
 
-      <div class="arabic-text">
-        <strong>المطلوب:</strong> اكتب دالة <code>common_elements(list1, list2)</code>.<br>
-        قم بتحويل القائمتين إلى <strong>Sets</strong> (مجموعات) ثم أرجع العناصر المشتركة فقط (التقاطع) بينهما.
-      </div>
-
-      <ul class="requirements">
-        <li>Write <code>common_elements(list1, list2)</code>.</li>
-        <li>Convert lists to sets and return the intersection (common elements).</li>
-      </ul>
-
-      <div class="vscode-editor-container">
-        <div class="vscode-header">
-          <span class="tab-active">sets.py</span>
+        <div class="arabic-text">
+            <strong>المطلوب:</strong> اكتب دالة <code>common_elements(list1, list2)</code>.<br>
+            حول القوائم إلى Sets وأرجع التقاطع (العناصر المشتركة).
         </div>
-        <textarea class="vscode-input" id="q4-code" placeholder="def common_elements(list1, list2):
-    # Use sets..."></textarea>
-      </div>
+        
+        <div class="vscode-editor-container">
+            <div class="vscode-header">
+                <span class="tab-active">sets.py</span>
+            </div>
+            <textarea class="vscode-input" id="q15-code"></textarea>
+        </div>
 
-      <div class="answer-reveal" id="q4-ans">
-        <strong>Model Answer:</strong>
-        <pre><code><span class="kwd">def</span> <span class="func">common_elements</span>(list1, list2):
+        <div class="answer-reveal" id="q15-ans">
+            <strong>Model Answer:</strong>
+<pre><code><span class="kwd">def</span> <span class="func">common_elements</span>(list1, list2):
     set1 = <span class="cls">set</span>(list1)
     set2 = <span class="cls">set</span>(list2)
     <span class="kwd">return</span> set1 & set2</code></pre>
-        <div class="explanation">
-          <h4>Logic & Explanation:</h4>
-          Lists allow duplicates, Sets do not. Converting to sets removes duplicates. The <code>&</code> operator is the
-          standard mathematical intersection operator for sets.
-          <div class="arabic-explain">
-            <strong>الشرح:</strong> القوائم تسمح بالتكرار، لكن المجموعات (Sets) لا تسمح بذلك. نحول القوائم إلى Sets
-            باستخدام <code>set()</code>. الرمز <code>&</code> يقوم بعملية التقاطع الرياضية لإيجاد العناصر الموجودة في
-            كلا المجموعتين.
-          </div>
         </div>
-      </div>
     </div>
 
-    <div class="question-block" id="q5-block">
-      <span class="question-text">Q5: Modules (Main.py)</span>
+    <div class="question-block" id="q16-block">
+        <span class="question-text">Q16: Modules</span>
 
-      <div class="arabic-text">
-        <strong>المطلوب:</strong><br>
-        1. اكتب كود لاستيراد الملف المسمى <code>my_functions</code> واستدعاء الدوال التي كتبتها سابقاً.<br>
-        2. استورد مكتبة بايثون الرياضية <code>math</code> واستخدم دالة الجذر التربيعي <code>sqrt</code>.
-      </div>
-
-      <ul class="requirements">
-        <li>Part A: Write code to import <code>my_functions</code> and call the previous functions.</li>
-        <li>Part B: Import <code>math</code> and use <code>sqrt</code>.</li>
-      </ul>
-
-      <div class="vscode-editor-container">
-        <div class="vscode-header">
-          <span class="tab-active">main.py</span>
+        <div class="arabic-text">
+            <strong>المطلوب:</strong><br>
+            1. استورد <code>my_functions</code> واستدع الدوال السابقة.<br>
+            2. استورد <code>math</code> واستخدم <code>sqrt</code>.
         </div>
-        <textarea class="vscode-input" id="q5-code" placeholder="import my_functions
-import math
-# Write test calls here..."></textarea>
-      </div>
+        
+        <div class="vscode-editor-container">
+            <div class="vscode-header">
+                <span class="tab-active">main.py</span>
+            </div>
+            <textarea class="vscode-input" id="q16-code"></textarea>
+        </div>
 
-      <div class="answer-reveal" id="q5-ans">
-        <strong>Model Answer:</strong>
-        <pre><code><span class="kwd">import</span> my_functions
+        <div class="answer-reveal" id="q16-ans">
+            <strong>Model Answer:</strong>
+<pre><code><span class="kwd">import</span> my_functions
 <span class="kwd">import</span> math
 
 <span class="com"># Part A</span>
 <span class="func">print</span>(my_functions.count_even_numbers([<span class="num">1</span>, <span class="num">2</span>, <span class="num">6</span>]))
-<span class="func">print</span>(my_functions.check_grade(<span class="num">78</span>))
 
 <span class="com"># Part B</span>
 <span class="func">print</span>(math.sqrt(<span class="num">25</span>))</code></pre>
-        <div class="explanation">
-          <h4>Logic & Explanation:</h4>
-          The <code>import</code> statement allows you to use code from other files or libraries.
-          <div class="arabic-explain">
-            <strong>الشرح:</strong> الأمر <code>import</code> هو المفتاح لاستخدام أكواد خارجية.
-            <code>my_functions</code> هو ملف قمت أنت بإنشائه، بينما <code>math</code> هي مكتبة جاهزة تأتي مع بايثون
-            للعمليات الحسابية المعقدة.
-          </div>
         </div>
-      </div>
     </div>
 
 
     <div class="submission-area">
-      <h2 style="color: var(--accent-yellow); border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
-        Actions</h2>
-      <button class="btn-check" onclick="checkAnswers()">Check Answers / تحقق من الإجابات</button>
+        <h2 style="color: var(--accent-yellow); border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 20px;">Actions</h2>
+            <button class="btn-check" onclick="checkAnswers()">Check Answers / تحقق من الإجابات</button>
     </div>
 
     <div class="footer">
-      <p>Python Programming Assessment</p>
+        <p>Python Comprehensive Assessment</p>
     </div>
-  </div>
+</div>
 
-  <script>
+<script>
     function checkAnswers() {
-      const revealIds = ["q1-ans", "q2-ans", "q3-ans", "q4-ans", "q5-ans"];
+      // List of all Question IDs to reveal
+      const revealIds = [
+          "q1-ans", "q2-ans", "q3-ans", "q4-ans", 
+          "q5-ans", "q6-ans", "q7-ans", "q8-ans",
+          "q9-ans", "q10-ans", "q11-ans",
+          "q12-ans", "q13-ans", "q14-ans", "q15-ans", "q16-ans"
+      ];
+      
       revealIds.forEach((id) => {
         const el = document.getElementById(id);
         if (el) {
-          el.style.display = "block";
-          // Highlight the block to show it was checked
-          el.parentElement.style.borderLeftColor = "var(--accent-green)";
+            el.style.display = "block";
+            // Highlight the block to show it was checked
+            if (el.parentElement.className.includes("question-block")) {
+                el.parentElement.style.borderLeftColor = "var(--accent-green)";
+            }
         }
       });
+      
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  </script>
+</script>
 
 </body>
-
 </html>
